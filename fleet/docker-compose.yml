@@ -1,0 +1,42 @@
+version: '2.2'
+
+volumes:
+  certs:
+    driver: local
+
+networks:
+  elastic:
+    driver: bridge
+
+services:
+
+  fleet:
+    image: docker.elastic.co/beats/elastic-agent:$ELASTIC_VERSION
+    healthcheck:
+      test: "curl -f http://127.0.0.1:8220/api/status | grep HEALTHY 2>&1 >/dev/null"
+      retries: 12
+      interval: 5s
+    hostname: fleet
+    container_name: fleet
+    restart: always
+    user: root
+    environment:
+    - FLEET_SERVER_ENABLE=1
+    - "FLEET_SERVER_ELASTICSEARCH_HOST=https://elasticsearch:9200"
+    - FLEET_SERVER_ELASTICSEARCH_USERNAME=elastic
+    - FLEET_SERVER_ELASTICSEARCH_PASSWORD=2FjwVapkj8qQfSjiNP0Z
+    - FLEET_SERVER_ELASTICSEARCH_CA=$CERTS_DIR/ca/ca.crt
+    - FLEET_SERVER_INSECURE_HTTP=1
+    - KIBANA_FLEET_SETUP=1
+    - "KIBANA_FLEET_HOST=https://kibana:5601" 
+    - KIBANA_FLEET_USERNAME=elastic
+    - KIBANA_FLEET_PASSWORD=2FjwVapkj8qQfSjiNP0Z
+    - KIBANA_FLEET_CA=$CERTS_DIR/ca/ca.crt
+    - FLEET_ENROLL=1
+    ports:
+      - 8220:8220
+    networks:
+      - elastic
+    volumes:
+       - certs:$CERTS_DIR
+

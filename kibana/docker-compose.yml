@@ -1,0 +1,36 @@
+version: '2.2'
+
+volumes:
+  es_data:
+    driver: local
+  certs:
+    driver: local
+
+networks:
+  elastic:
+    driver: bridge
+
+services:
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:$ELASTIC_VERSION
+    container_name: kibana
+    restart: always
+    environment:
+      SERVER_NAME: localhost
+      ELASTICSEARCH_HOSTS: https://elasticsearch:9200
+      ELASTICSEARCH_URL: https://elasticsearch:9200
+      ELASTICSEARCH_USERNAME: kibana_system
+      ELASTICSEARCH_PASSWORD: olSsM7MBwk3WUD8PN8WO
+      ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES: $CERTS_DIR/ca/ca.crt
+      SERVER_SSL_ENABLED: "true"
+      SERVER_SSL_KEY: $CERTS_DIR/kibana/kibana.key
+      SERVER_SSL_CERTIFICATE: $CERTS_DIR/kibana/kibana.crt
+    volumes:
+       - ./kibana.yml:/usr/share/kibana/config/kibana.yml
+       - certs:$CERTS_DIR
+    ports:
+      - 5601:5601
+    networks:
+      - elastic
+
