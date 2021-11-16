@@ -8,6 +8,8 @@ Because installing all the Elastic components in a self-hosted/self-managed envi
 
 # What would that look like?
 
+![Architecture](https://github.com/scattic/elastic-stack/blob/main/architecture.png?raw=true)
+
 # What's missing?
 
 - Windows Agent deployment script - PowerShell
