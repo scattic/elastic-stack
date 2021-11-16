@@ -3,3 +3,4 @@
 ./agent/docker-compose.yml
 ./fleet/docker-compose.yml
 ./kibana/docker-compose.yml
+./docs/*.o*

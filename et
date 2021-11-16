@@ -1,0 +1,60 @@
+[33mcommit 7b940966763add04f643627c79d1145fd3ee49a8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: scattic <bill@ms.com>
+Date:   Tue Nov 16 16:47:19 2021 +0200
+
+    added digram
+
+[33mcommit ff501987c865144e141cc8163214358473c0f3b1[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: scattic <68233320+scattic@users.noreply.github.com>
+Date:   Mon Nov 15 19:55:14 2021 +0200
+
+    Update .gitignore
+
+[33mcommit 81c4f3e4ee36db134beb480f3ad987fe2f348bdb[m
+Author: scattic <68233320+scattic@users.noreply.github.com>
+Date:   Mon Nov 15 19:53:33 2021 +0200
+
+    Delete docker-compose.yml
+
+[33mcommit fff3c6cb174278fbd42d67935b4b87f9f3094281[m
+Author: scattic <68233320+scattic@users.noreply.github.com>
+Date:   Mon Nov 15 19:53:20 2021 +0200
+
+    Delete docker-compose.yml
+
+[33mcommit 7c929080aa1f0095347f3eb3d76962af88311bc4[m
+Author: scattic <68233320+scattic@users.noreply.github.com>
+Date:   Mon Nov 15 19:53:10 2021 +0200
+
+    Delete passwords
+
+[33mcommit b1b55225f0132cfdd8498760a4f1ca799ea3c746[m
+Author: scattic <68233320+scattic@users.noreply.github.com>
+Date:   Mon Nov 15 19:53:03 2021 +0200
+
+    Delete creds.txt
+
+[33mcommit c8cd9cc373b2791ad36facfc9e41e1421b5fc5aa[m
+Author: scattic <68233320+scattic@users.noreply.github.com>
+Date:   Mon Nov 15 19:52:52 2021 +0200
+
+    Delete ca.crt
+
+[33mcommit 871fde3aac1cf2e96d2a90facf5ab0d858beae0e[m
+Merge: 3930513 f7cb4b8
+Author: scattic <bill@ms.com>
+Date:   Mon Nov 15 19:49:17 2021 +0200
+
+    Merge branch 'main' of https://github.com/scattic/elastic-stack into main
+
+[33mcommit 3930513e100044120e15d771ac68091eb14407b4[m
+Author: scattic <bill@ms.com>
+Date:   Mon Nov 15 19:46:53 2021 +0200
+
+    First commit
+
+[33mcommit f7cb4b87353a88d1fabe8b608a9e0f389484bde4[m
+Author: scattic <68233320+scattic@users.noreply.github.com>
+Date:   Mon Nov 15 19:46:14 2021 +0200
+
+    Initial commit

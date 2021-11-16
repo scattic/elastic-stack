@@ -10,9 +10,9 @@ Because installing all the Elastic components in a self-hosted/self-managed envi
 
 # What's missing?
 
-- HAProxy with TLS termination 
-- HA Fleet (fleet behind the proxy)
-- Logstash (looks like it's getting phased out)
+- Windows Agent deployment script - PowerShell
+- HAProxy with TLS termination for ES and Fleet
+- Logstash (looks like this one is getting phased out gradually)
 - Generated object encryption key for Kibana
 - Secure Fleet server communication with agents (it's HTTP at the moment)
 - Version 8 compatibility checks
@@ -26,5 +26,4 @@ Because installing all the Elastic components in a self-hosted/self-managed envi
 - Clone this repo
 - `sudo ./setup.sh`
 
-# Everything worked, now what?
-
+- If you need to nuke everything and start fresh: `sudo ./setup.sh reset`
